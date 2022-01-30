@@ -1,0 +1,200 @@
+.root {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-focus-color: transparent;
+    -fx-border-color:transparent;
+    -fx-fill: white;
+    -fx-background-color: #181A28;
+}
+
+.bodyBoard {
+    -fx-background-image: url('../pictures/imagesBoard/background3DGame.gif');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.boardStyle {
+    /*-fx-background-color: linear-gradient(to bottom,  #030616,#060b23);*/
+    /*-fx-background-color: linear-gradient(to bottom, #12153a, #202467);*/
+    -fx-background-color:  linear-gradient(to bottom, #000D1A, #001A34);
+}
+
+
+
+.TileStart {
+    /*-fx-background-image: url('../pictures/imagesBoard/tileDepart.png');*/
+    /*-fx-background-position: center;*/
+    /*-fx-background-size: cover;*/
+}
+
+/*.TileJail {*/
+/*    -fx-background-image: url('../pictures/imagesBoard/tileJail.png');*/
+/*    -fx-background-position: center;*/
+/*    -fx-background-size: cover;*/
+/*}*/
+
+
+
+.text {
+    -fx-fill: white;
+}
+
+#btnThrowDice {
+    -fx-border-radius: 100 100 100 100;
+    -fx-background-radius: 100;
+}
+
+#btnExchange {
+    -fx-border-radius: 100 100 100 100;
+    -fx-background-radius: 100;
+}
+
+#btnProperty {
+    -fx-border-radius: 100 100 100 100;
+    -fx-background-radius: 100;
+}
+
+#btnNextTurn {
+    -fx-border-radius: 100 100 100 100;
+    -fx-background-radius: 100;
+}
+
+/**
+    LAYOUT PLAYER
+ */
+
+.LayoutPlayer {
+    -fx-background-color:  linear-gradient(to bottom,  #090A0F,#1B2735);
+    -fx-pref-width: 350;
+    -fx-pref-height: 100;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8 8 8 8;
+    -fx-border-color: #ffffff73;
+    -fx-border-width: 1;
+}
+
+.ImgPionPlayer {
+    -fx-background-color:  linear-gradient(to right,  #090A0F,#1B2735);
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-border-color: #1B2735;
+}
+
+.Font-SizeNamePlayer {
+    -fx-font-size: 18px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+/**
+    BUTTONS YES OR NO
+ */
+
+.btnChoiceYesOrNo {
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-background-color:  #000f1e;
+    -fx-pref-width: 70;
+    -fx-pref-height: 70;
+}
+.btnChoiceOffOrOn {
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-background-color:  #000f1e;
+    -fx-pref-width: 70;
+    -fx-pref-height: 70;
+}
+.btnPlayer{
+    -fx-background-color:  #000f1e;
+     -fx-font-size: 14px;
+        -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.PoliceBuyableLabel {
+    -fx-font-size: 14px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.PoliceRentBuyableLabel {
+    -fx-font-size: 20px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.PoliceAlertInfo {
+    -fx-font-size: 18px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.PoliceBuyableLabelPrice {
+    -fx-font-size: 20px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.PoliceNameTileBuyableLabel {
+    -fx-font-size: 24px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+.PoliceSettingLabel {
+    -fx-font-size: 24px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.alertFont-Size {
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 18px;
+}
+
+.font-Size-Price-Buyable {
+    -fx-font-size: 40px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: black;
+}
+
+.CardsCommunity-ChanceFS {
+    -fx-font-size: 36px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: white;
+}
+
+.PaneCardNamePlayer {
+    -fx-font-size: 34px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: white;
+}
+
+.bgCardChance {
+    -fx-background-image: url('../pictures/imagesBoard/cardChance.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.bgCardCommunity {
+    -fx-background-image: url('../pictures/imagesBoard/cardCommunautaire.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
+
+.font-SizeUpdateMoney {
+    -fx-font-size: 180px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: red;
+}
+
+.font-sizeWinner {
+    -fx-font-size: 45px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: white;
+}
+
+.font-sizeLabelWinner {
+    -fx-font-size: 40px;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-text-fill: white;
+}
+
+
+
+
+
+
+

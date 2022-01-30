@@ -1,0 +1,163 @@
+.bodySelectPlayerAmount {
+    -fx-background-image: url("../pictures/imagesBoard/background3DGame.gif");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    /*-fx-background-color:  linear-gradient(to bottom,  #090A0F,#1B2735);*/
+}
+
+.btnSongStyle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 23px;
+    -fx-effect: bloom;
+}
+
+.labelTitle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 22px;
+}
+
+.paneSettingsSelectPlayer {
+    -fx-border-radius: 100;
+}
+
+.descTitle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 22px;
+}
+
+.descriptionPion {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 16px;
+}
+
+.Title {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 34px;
+}
+
+.choiceColors {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 16px;
+}
+
+.regexStyle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 14px;
+}
+
+.btnPions {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 16px;
+    -fx-background-color: linear-gradient(to bottom,  #354f69,#524679);
+}
+
+.btnPions:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.btnThrowGame {
+    -fx-background-color: linear-gradient(to bottom,  #354f69,#524679);
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 16px;
+}
+
+.btnThrowGame:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.btnBackHome:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#labelTitle {
+    -fx-text-fill:  #3b3854;
+}
+
+#fondFormulaire {
+    -fx-background-image: url("../pictures/backgroundCreatePlayer/backgroundForm.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius : 10;
+}
+
+#backFormulaire2 {
+    -fx-background-image: url("../pictures/backgroundCreatePlayer/backorigin.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius : 10;
+}
+
+#animationRocket1 {
+    -fx-background-image: url('../pictures/icon/rocket.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#animationRocket2 {
+    -fx-background-image: url('../pictures/icon/rocket.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#animationRocket3 {
+    -fx-background-image: url('../pictures/icon/rocket.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+#bgPion {
+    -fx-background-image: url("../pictures/backgroundCreatePlayer/viewPion.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius : 10;
+}
+
+#bgCreate {
+    -fx-background-image: url("../pictures/backgroundCreatePlayer/backorigin2.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-radius : 10;
+}
+
+#description{
+    -fx-background-image: url("../pictures/backgroundCreatePlayer/backorigin.png");
+    -fx-background-size: cover;
+    -fx-background-position: bottom;
+    -fx-background-radius : 10;
+}
+
+.btnSettings {
+    -fx-background-color:  transparent;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+}
+
+.btnSettings:armed {
+    -fx-background-color:  transparent;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-scale-x: 1.45;
+    -fx-scale-y: 1.45;
+}
+
+.backgroundDescription {
+    -fx-background-image: url('../pictures/backgroundcreateplayer/backorigin.png');
+    -fx-background-size: cover;
+}
+
+.slectFontSize {
+    -fx-font-size: 28px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}

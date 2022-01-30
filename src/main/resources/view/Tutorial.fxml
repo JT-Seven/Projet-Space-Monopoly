@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="parentTutorial" prefHeight="960.0" prefWidth="1536.0" stylesheets="@../css/Tutorial.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.intech.spacemonopoly.controller.TutorialController">
+   <children>
+      <HBox fx:id="contents_tutorial" alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+               <children>
+                  <Pane fx:id="paneRules2" prefHeight="634.0" prefWidth="907.0" styleClass="paneRules" stylesheets="@../css/Tutorial.css" visible="false">
+                     <children>
+                        <Pane layoutX="333.0" layoutY="37.0" prefHeight="53.0" prefWidth="242.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="titleRules" text="La règle du Monopoly" wrappingWidth="242.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="35.0" layoutY="227.0" prefHeight="321.0" prefWidth="422.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="47.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title3Rules" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="90.0" prefHeight="174.0" prefWidth="221.0" styleClass="textRules" text="Vous devez prendre la carte située sur le dessus du paquet correspondant, suivre les instructions de la carte et la remettre face cachée en-dessous de la pile.Si vous tirez une carte Vous êtes Libéré de Prison, vous pouvez la garder jusqu’à ce que vous décidiez de l’utiliser ou de la vendre à un autre joueur." textFill="WHITE" wrapText="true" />
+                              <ImageView fitHeight="128.0" fitWidth="102.0" layoutX="309.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true" rotate="14.0">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/objChance.jpg" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="128.0" fitWidth="102.0" layoutX="303.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" rotate="-33.7">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/objCommunity.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="WHITE" layoutX="18.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Chance ou Caisse de communauté" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="301.0" layoutY="158.0" prefHeight="53.0" prefWidth="279.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="53.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Type de cases" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="662.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/logoiconejeu/LogoSpaceMonopoly.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="476.0" layoutY="227.0" prefHeight="321.0" prefWidth="414.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="47.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title3Rules" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="27.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Compagnie de Service Public" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="100.0" prefHeight="93.0" prefWidth="221.0" styleClass="textRules" text="Pour connaître le montant du loyer, lancez les dés et multipliez le résultat par 4. Si vous possédez les deux compagnies de service public, multipliez le résultat par 10 !" textFill="WHITE" wrapText="true" />
+                              <ImageView fitHeight="128.0" fitWidth="102.0" layoutX="258.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/tileElectricity_.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="128.0" fitWidth="102.0" layoutX="265.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/tileWater.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnNext2" layoutX="503.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickNext" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="suivant" />
+                        <Button fx:id="btnPrevious" layoutX="354.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickPrevious" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="precedent" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneRules3" prefHeight="634.0" prefWidth="907.0" styleClass="paneRules" stylesheets="@../css/Tutorial.css" visible="false">
+                     <children>
+                        <Pane layoutX="333.0" layoutY="37.0" prefHeight="53.0" prefWidth="242.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="titleRules" text="La règle du Monopoly" wrappingWidth="242.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="43.0" layoutY="252.0" prefHeight="321.0" prefWidth="827.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="47.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title3Rules" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="7.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Allez en prison" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="40.0" layoutY="65.0" prefHeight="189.0" prefWidth="304.0" styleClass="textRules" text="Si vous vous arrêtez sur cette case, votre pion se deplacera sur la case ALLEZ EN PRISON. Case Prison Important : vous ne touchez pas les 200$ si vous allez sur la case ALLEZ EN PRISON en passant par la case DÉPART. Si vous êtes envoyé en prison, votre tour est terminé! Vous êtes envoyé en prison si vous tirez une carte chance ou caisse de communauté qui vous indique d'aller en prison.vous faites trois doubles à la suite aux dés" textFill="WHITE" wrapText="true" />
+                              <Text fill="WHITE" layoutX="520.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Comment sortir de prison ?" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="427.0" layoutY="86.0" prefHeight="236.0" prefWidth="335.0" styleClass="textRules" text="Payer une amende de 100$ au début du tour suivant. Vous pouvez alors lancer les dés et bouger votre pion normalement.   Vous pouvez utiliser egalement une carte Vous êtes libéré de Prison si vous en possédez une. Vous pouvez également en acheter une à un autre joueur. Une fois utilisée,  la carte repartira en dessous de la pile, lancez les dés et bougez votre pion.Vous pouvez aussi attendre trois tours en lançant les dés à chaque tour pour essayer de faire un double. Si vous faites un double, sortez de prison en utilisant le lancer de dés pour avancer. Si, après les trois tours, vous n'avez pas fait de double, bougez votre pion suivant votre lancer de dés." textFill="WHITE" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="301.0" layoutY="158.0" prefHeight="53.0" prefWidth="279.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="53.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Type de cases" wrappingWidth="177.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="662.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/logoiconejeu/LogoSpaceMonopoly.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnNext3" layoutX="503.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickNext" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="suivant" />
+                        <Button fx:id="btnPrevious2" layoutX="354.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickPrevious" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="precedent" />
+                        <ImageView fitHeight="126.0" fitWidth="115.0" layoutX="59.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/imagesBoard/tileJail.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="127.0" fitWidth="104.0" layoutX="51.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/imagesBoard/tileJailTwo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneRules4" prefHeight="634.0" prefWidth="907.0" styleClass="paneRules" stylesheets="@../css/Tutorial.css" visible="false">
+                     <children>
+                        <Pane layoutX="209.0" layoutY="30.0" prefHeight="53.0" prefWidth="242.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="titleRules" text="La règle du Monopoly" wrappingWidth="242.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="35.0" layoutY="213.0" prefHeight="299.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="48.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Impôts - Taxe de luxe" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="90.0" prefHeight="86.0" prefWidth="221.0" styleClass="textRules" text="Si vous vous arrêtez sur une de ces cases, payez le montant indiquéà la Banque.Si vous vous arrêtez sur une de ces cases, payez le montant indiquéà la Banque." textFill="WHITE" wrapText="true" />
+                              <ImageView fitHeight="105.0" fitWidth="88.0" layoutX="69.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/case-taxe.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="339.0" layoutY="213.0" prefHeight="299.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="48.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Parc gratuit" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="89.0" prefHeight="183.0" prefWidth="229.0" styleClass="textRules" text="Rien de spécial ! Mais vous ne gagnez pas d’argent non plus…" textFill="WHITE" wrapText="true" />
+                              <ImageView fitHeight="122.0" fitWidth="90.0" layoutX="73.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/freeParking.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="77.0" layoutY="115.0" prefHeight="76.0" prefWidth="474.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Bienvenue dans space monopoly , un jeu de monopoly dans le theme de l'espace !" wrappingWidth="446.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="626.0" layoutY="213.0" prefHeight="299.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="49.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Propriété n'appartenant à personne" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="95.0" prefHeight="104.0" prefWidth="229.0" styleClass="textRules" text="Vous pouvez acheter la propriété sur laquelle vous vous arrêtez en payant à la Banque le prix indiqué sur la case du plateau de jeu." textFill="WHITE" wrapText="true" />
+                              <ImageView fitHeight="76.0" fitWidth="66.0" layoutX="19.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/tileRocket.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="76.0" fitWidth="60.0" layoutX="99.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/gas-pump.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="76.0" fitWidth="60.0" layoutX="183.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../pictures/imagesBoard/tileWater.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnNext4" layoutX="466.0" layoutY="571.0" mnemonicParsing="false" onAction="#onClickNext" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="suivant" translateX="1.0" translateY="29.0" />
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="662.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/logoiconejeu/LogoSpaceMonopoly.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnPrevious3" layoutX="314.0" layoutY="600.0" mnemonicParsing="false" onAction="#onClickPrevious" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="precedent" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneRules5" prefHeight="634.0" prefWidth="907.0" styleClass="paneRules" stylesheets="@../css/Tutorial.css" visible="false">
+                     <children>
+                        <Pane layoutX="333.0" layoutY="32.0" prefHeight="53.0" prefWidth="242.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="titleRules" text="La règle du Monopoly" wrappingWidth="242.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="88.0" layoutY="223.0" prefHeight="189.0" prefWidth="499.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="188.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Au secours !! J'ai besoin d'argent !!" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="90.0" prefHeight="86.0" prefWidth="461.0" styleClass="textRules" text="Si vous êtes mis en faillite par un autre joueur, vous avez perdu la partie. Si vous possedez une carte sortie de prison soyez malin et vendez la . Avec un peu de chance si vous atterissez sur une case chance ou communautaire, il se peut que vous touchiez une prime." textFill="WHITE" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="280.0" layoutY="129.0" prefHeight="53.0" prefWidth="115.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="La faillite" wrappingWidth="90.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnPrevious4" layoutX="417.0" layoutY="586.0" mnemonicParsing="false" onAction="#onClickPrevious" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="precedent" />
+                        <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="598.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/1620996577_184809_gif-url.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="657.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/imagesBoard/bule-Conversation.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="694.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: black; -fx-text-alignment: center;" styleClass="endMessage" text="Maintenant a vous de conquerir l'espace !" wrappingWidth="177.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneRules1" prefHeight="634.0" prefWidth="907.0" styleClass="paneRules" stylesheets="@../css/Tutorial.css">
+                     <children>
+                        <Pane layoutX="209.0" layoutY="30.0" prefHeight="53.0" prefWidth="242.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="titleRules" text="La règle du Monopoly" wrappingWidth="242.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="35.0" layoutY="213.0" prefHeight="299.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="48.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Mise en place" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="47.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title3Rules" text=" Le banquier" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="18.0" layoutY="90.0" prefHeight="174.0" prefWidth="221.0" styleClass="textRules" text="Le systeme s'occuppe  de la banque et dirige les ventes de carte . il  gère egalement la totalité de l’argent,  les titres de propriété qui ne sont pas encore achetés par les joueurs verse les salaires et les primes encaisse l'argent des taxes et des amendes vend les propriétés et dirige les ventes aux enchères vend les maisons et les hôtels " textFill="WHITE" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="339.0" layoutY="213.0" prefHeight="299.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="48.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Comment jouer ?" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="47.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title3Rules" text="Comment gagner ?" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="89.0" prefHeight="183.0" prefWidth="229.0" styleClass="textRules" text="Il faut être le dernier joueur qui n’ait pas fait faillite.Comment faire : acheter des planète et faire payer le plus gros loyer possible aux joueurs qui atterrissent chez vous. Acheter toutes les planete d’un même groupe de couleur pour augmenter les loyers et pouvoir construire des maisons et des hôtels aﬁn d’augmenter le montant de vos revenus" textFill="WHITE" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="77.0" layoutY="115.0" prefHeight="76.0" prefWidth="474.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Bienvenue dans space monopoly , un jeu de monopoly dans le theme de l'espace !" wrappingWidth="446.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="626.0" layoutY="213.0" prefHeight="398.0" prefWidth="256.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                           <children>
+                              <Text fill="WHITE" layoutX="49.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="title2Rules" text="Quand c'est votre tour" wrappingWidth="140.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                              <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="58.0" prefHeight="330.0" prefWidth="229.0" styleClass="textRules" text="Lancez les deux dés blancs. Votre pion bougera d’autant de cases que le nombre de points indiqué sur les dés. La case où vous vous arrêterez déterminera ce que vous avez à faire. Voir la rubrique « Types de Cases » . Si vous passez par ou vous arrêtez sur la case DÉPART, vous recevez 200$ de la Banque.Si vous faites un double aux dés, effectuez les opérations habituelles sur la case où vous vous arrêtez . Attention ! Si vous faites trois doubles de suite, rendez-vous immédiatement en prison.Lorsque vous avez terminé votre tour passer au tour suivant.Lancez les deux dés blancs. Votre pion bougera d’autant de cases que le nombre de points indiqué sur les dés. La case où vous vous arrêterez déterminera ce que vous avez à faire. Voir la rubrique « Types de Cases » . Si vous passez par ou vous arrêtez sur la case DÉPART, vous recevez 200$ de la Banque.Si vous faites un double aux dés, effectuez les opérations habituelles sur la case où vous vous arrêtez . Attention ! Si vous faites trois doubles de suite, rendez-vous immédiatement en prison.Lorsque vous avez terminé votre tour passer au tour suivant." textFill="WHITE" wrapText="true" />
+                           </children>
+                        </Pane>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="662.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pictures/logoiconejeu/LogoSpaceMonopoly.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnNext" layoutX="392.0" layoutY="571.0" mnemonicParsing="false" onAction="#onClickNext" prefHeight="23.0" prefWidth="74.0" styleClass="btnNextAndPrevious" text="suivant" translateX="1.0" translateY="29.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <MFXButton fx:id="backHome" buttonType="RAISED" depthLevel="LEVEL4" layoutX="24.0" layoutY="24.0" minWidth="51.0" onAction="#backHome" prefHeight="54.0" prefWidth="51.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" rippleRadius="100.0" style="-fx-background-radius: 200; -fx-border-radius: 200; -fx-background-color: #333153;" styleClass="btnBackHome" text=" " textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" scaleX="1.1" scaleY="1.2">
+               <image>
+                  <Image url="@../pictures/icon/play.png" />
+               </image>
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <effect>
+                  <Bloom threshold="0.63" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </MFXButton>
+   </children>
+</AnchorPane>

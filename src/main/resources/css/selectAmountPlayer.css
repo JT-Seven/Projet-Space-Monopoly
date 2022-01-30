@@ -1,0 +1,47 @@
+#parentContainerSelectPlayer {
+    -fx-background-image: url("../pictures/imagesBoard/background3DGame.gif");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.btnSongStyle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 23px;
+    -fx-effect: bloom;
+}
+
+#btnSettings:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.labelTitle {
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 34px;
+}
+
+.buttonSelected {
+    -fx-background-color: #333153;
+    -fx-background-size: cover;
+    -fx-font-size: 18;
+    -fx-text-fill: white;
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-background-position: center;
+    -fx-effect: bloom;
+}
+
+.buttonSelectedSetting:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.btnBackHome {
+    -fx-background-color: #333153;
+}
+
+.btnBackHome:armed {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

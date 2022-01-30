@@ -1,0 +1,38 @@
+.root {
+    -fx-background-image: url("../pictures/imagesBoard/background3DGame.gif");
+    -fx-background-size: cover;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+
+.paneRules {
+   -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34);
+   -fx-background-radius: 8;
+   -fx-border-color: white;
+   -fx-border-radius: 8;
+}
+.titleRules {
+    -fx-font-size: 18px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+.title2Rules {
+    -fx-font-size: 16px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+.title3Rules {
+    -fx-font-size: 14px;
+    -fx-font-family: "Berlin Sans FB Demi";
+}
+.textRules {
+    -fx-font-size: 14px;
+    -fx-font-family: "Berlin Sans FB Demi";
+       -fx-color: white;
+}
+.endMessage {
+  -fx-font-size: 16px;
+    -fx-font-family: "Berlin Sans FB Demi";
+       -fx-color: black;
+}
+.btnNextAndPrevious {
+-fx-background-color: #ffffff;
+ -fx-opacity: 0.4;
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXSlider?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainerSelectPlayer" blendMode="MULTIPLY" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="1536.0" styleClass="bodySelectPlayerAmount" stylesheets="@../css/selectAmountPlayer.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.intech.spacemonopoly.controller.SelectPlayerAmountController">
+   <children>
+      <BorderPane fx:id="borderPaneCreate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <center>
+            <AnchorPane fx:id="paneSelectedPlayers" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="-9.0" layoutY="-9.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="titleNbJoueurs" prefHeight="54.0" styleClass="labelTitle" text="Nombre de Joueurs" textFill="WHITE" translateY="-50.0">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow>
+                                 <input>
+                                    <Bloom />
+                                 </input>
+                              </DropShadow>
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <MFXButton fx:id="select2PlayersButton" buttonType="RAISED" depthLevel="LEVEL4" onAction="#select2Players" prefHeight="91.0" prefWidth="261.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" style="-fx-background-radius: 25;" styleClass="buttonSelected" text="2 Joueurs" translateX="1000.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <effect>
+                              <Bloom threshold="0.25" />
+                           </effect>
+                        </MFXButton>
+                        <MFXButton fx:id="select3PlayersButton" buttonType="RAISED" depthLevel="LEVEL4" onAction="#select3Players" prefHeight="91.0" prefWidth="261.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" style="-fx-background-radius: 25;" styleClass="buttonSelected" text="3 Joueurs" translateX="1000.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                           <effect>
+                              <Bloom threshold="0.25" />
+                           </effect>
+                        </MFXButton>
+                        <MFXButton fx:id="select4PlayersButton" buttonType="RAISED" depthLevel="LEVEL4" onAction="#select4Players" prefHeight="91.0" prefWidth="261.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" style="-fx-background-radius: 25;" styleClass="buttonSelected" text="4 Joueurs" translateX="1000.0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.25" />
+                           </effect>
+                        </MFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <effect>
+            <DropShadow />
+         </effect>
+      </BorderPane>
+      <HBox fx:id="hBoxSettingsSelect" alignment="TOP_RIGHT" maxWidth="-Infinity" prefWidth="150.0" StackPane.alignment="CENTER_RIGHT">
+         <children>
+            <Pane fx:id="animateSettings" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="60.0" scaleX="1.4" scaleY="1.4" style="-fx-background-radius: 100;" styleClass="buttonSelected">
+               <children>
+                  <ImageView fx:id="imgSettings" fitHeight="33.0" fitWidth="33.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pictures/imagesBoard/gear.png" />
+                     </image>
+                  </ImageView>
+                  <MFXButton fx:id="btnSettings" buttonType="RAISED" computeRadiusMultiplier="false" defaultButton="true" depthLevel="LEVEL4" layoutX="4.0" layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="53.0" prefHeight="54.0" prefWidth="53.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" style="-fx-background-color: transparent; -fx-background-radius: 100; -fx-border-radius: 100;" styleClass="btnSettingsSelectPlayer" text=" " translateY="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </MFXButton>
+               </children>
+            </Pane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="hBoxBackSelect" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" StackPane.alignment="CENTER_LEFT">
+         <children>
+            <MFXButton fx:id="backHome" buttonType="RAISED" depthLevel="LEVEL4" minWidth="51.0" onAction="#backHome" prefHeight="54.0" prefWidth="51.0" rippleAnimateBackground="false" rippleColor="TRANSPARENT" rippleRadius="100.0" style="-fx-background-radius: 100;" styleClass="btnBackHome" text=" " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" scaleX="1.1" scaleY="1.2">
+                     <image>
+                        <Image url="@../pictures/icon/play.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <effect>
+                        <Bloom threshold="0.63" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </MFXButton>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </HBox>
+      <AnchorPane fx:id="slideSettings" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="290.0" style="-fx-background-color: #0e1e33;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1246.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" StackPane.alignment="CENTER_RIGHT">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="60.0" layoutY="120.0" prefHeight="57.0" prefWidth="132.0" style="-fx-font-size: 23px; -fx-effect: bloom; -fx-text-fill: white;" styleClass="btnSongStyle" text="Musique" textFill="WHITE">
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <ImageView fitHeight="66.0" fitWidth="30.0" layoutX="238.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@../pictures/imagesBoard/remove.png" />
+               </image>
+            </ImageView>
+            <MFXButton fx:id="slideClose" buttonType="RAISED" depthLevel="LEVEL4" layoutX="237.0" layoutY="20.0" minWidth="30.0" prefHeight="31.0" prefWidth="54.0" rippleAnimateBackground="false" style="-fx-background-color: transparent; " text=" " />
+
+            <ImageView fx:id="song" fitHeight="29.0" fitWidth="23.0" layoutX="170.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="2.0">
+               <image>
+                  <Image url="@../pictures/icon/volume-up-4-xl.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnSongMute" layoutX="165.0" layoutY="137.0" mnemonicParsing="false" opacity="0.0" prefHeight="30.0" prefWidth="48.0" text="Button" />
+            <MFXSlider fx:id="volumeSlider" layoutX="65.0" layoutY="204.0" prefHeight="7.0" prefWidth="161.0" />
+
+            <ImageView fx:id="mute" fitHeight="26.0" fitWidth="16.0" layoutX="181.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../pictures/icon/mute-2-xl.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

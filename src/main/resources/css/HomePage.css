@@ -1,0 +1,26 @@
+.root {
+    -fx-background-image: url("../pictures/imagesBoard/background3DGame.gif");
+    -fx-background-size: cover;
+    -fx-font-family: "Berlin Sans FB Demi";
+    /*-fx-focus-color: transparent;*/
+    /*-fx-border-color:transparent;*/
+    /*-fx-background-color:  linear-gradient(to bottom,  #090A0F,#1B2735);*/
+}
+
+#titleAnimate {
+    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 45px;
+}
+
+/**
+    STARS EFFECT
+ */
+
+.starsEffectPink {
+    -fx-text-fill:  #ff62f5;
+    -fx-font-size: 16px;
+}
+
+.starsEffectBlue {
+    -fx-text-fill:  white;
+}

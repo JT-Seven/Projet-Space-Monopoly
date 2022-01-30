@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.SceneAntialiasing?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="Ap" minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="1536.0" style="-fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" styleClass="bodyBoard" stylesheets="@../css/Board.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.intech.spacemonopoly.controller.BoardController">
+    <children>
+        <AnchorPane fx:id="responsiveBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="880.0" prefWidth="1536.0" translateY="-5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-6.0" StackPane.alignment="CENTER">
+            <children>
+                <SubScene fx:id="subScene" depthBuffer="true" fill="TRANSPARENT" height="885.0" width="1536">
+                    <antiAliasing>
+                        <SceneAntialiasing fx:constant="BALANCED" />
+                    </antiAliasing>
+                    <root>
+                        <Pane fx:id="theFinalBackground3D" style="-fx-background-color: transparent;" />
+                    </root>
+                </SubScene>
+                <BorderPane fx:id="responsiveBoard3D" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <center>
+                        <Pane fx:id="board3D" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="770.0" prefWidth="770.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <Pane fx:id="theFinalBoard3D" prefHeight="767.0" prefWidth="767.0" translateY="70.0" />
+                                <Group fx:id="groupBoard3D" />
+                                <HBox fx:id="bodyBoard3D" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/Board.css">
+                                    <children>
+                                        <GridPane fx:id="boardGrid" alignment="CENTER" style="-fx-background-color: transparent;" styleClass="boardStyle">
+                                            <columnConstraints>
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="90.0" prefWidth="90.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="65.0" prefWidth="65.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="90.0" prefWidth="90.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="90.0" prefHeight="90.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="65.0" prefHeight="65.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="90.0" prefHeight="90.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0">
+                                                <center>
+                                                    <Text fill="WHITE" rotate="315.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" />
+                                                </center>
+                                                <bottom>
+                                                    <ImageView fitHeight="53.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="135.0" translateX="-5.0" translateY="-19.5" BorderPane.alignment="CENTER">
+                                                        <image>
+                                                            <Image url="@../pictures/imagesBoard/freeParking.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="1">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="2">
+                                                <bottom>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </bottom>
+                                    <center>
+                                       <ImageView fitHeight="182.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" translateX="2.5" translateY="-10.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileChance.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="3">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="4">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="5">
+                                                <bottom>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </bottom>
+                                    <center>
+                                       <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" translateY="-7.5" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileRocket.png" />
+                                          </image>
+                                          <effect>
+                                             <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                          </effect>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="6">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="7">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="8">
+                                                <bottom>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </bottom>
+                                    <center>
+                                       <ImageView fitHeight="63.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" translateX="-5.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileWater.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="9">
+                                                <bottom>
+                                                    <HBox alignment="CENTER" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" translateY="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="TileJail" GridPane.columnIndex="10">
+                                                <bottom>
+                                                    <ImageView fitHeight="50.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" rotate="-135.0" translateY="-23.0" BorderPane.alignment="CENTER">
+                                                        <image>
+                                                            <Image url="@../pictures/imagesBoard/tileJail.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                </bottom>
+                                    <center>
+                                       <Pane fx:id="theFinalPositionCage" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER_RIGHT">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER_RIGHT">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                                                <right>
+                                                    <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="18.0" BorderPane.alignment="CENTER_LEFT" />
+                                                </right>
+                                    <center>
+                                       <ImageView fitHeight="85.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" translateX="-12.5" translateY="2.5" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileCommunity.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                                                <right>
+                                                    <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="2.0" BorderPane.alignment="CENTER" />
+                                                </right>
+                                    <center>
+                                       <ImageView fitHeight="67.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" translateX="-5.0" translateY="-2.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileRocket.png" />
+                                          </image>
+                                          <effect>
+                                             <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                          </effect>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="8" GridPane.valignment="TOP">
+                                                <right>
+                                                    <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="14.0" BorderPane.alignment="CENTER" />
+                                                </right>
+                                    <center>
+                                       <ImageView fitHeight="63.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" translateX="-5.0" translateY="-7.5" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileElectricity_.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="TOP">
+                                                <right>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textTile" translateX="-25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </right>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.rowIndex="10">
+                                                <center>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-7.0" translateY="75.0" BorderPane.alignment="CENTER" />
+                                                </center>
+                                                <bottom>
+                                                    <ImageView fitHeight="108.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" rotate="45.0" translateX="2.0" translateY="8.0" BorderPane.alignment="CENTER">
+                                                        <image>
+                                                            <Image url="@../pictures/imagesBoard/tileJailTwo.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                </bottom>
+                                                <left>
+                                                    <Text fill="WHITE" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-5.0" translateY="32.0" BorderPane.alignment="CENTER" />
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                                <top>
+                                                    <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" translateY="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </top>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="2" GridPane.rowIndex="10">
+                                                <top>
+                                                    <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" translateY="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </top>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="3" GridPane.rowIndex="10">
+                                                <top>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </top>
+                                    <center>
+                                       <ImageView fitHeight="182.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" translateY="5.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileChance.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="5" GridPane.rowIndex="10">
+                                                <top>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </top>
+                                    <center>
+                                       <ImageView fitHeight="53.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileRocket.png" />
+                                          </image>
+                                          <effect>
+                                             <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                          </effect>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="6" GridPane.rowIndex="10">
+                                                <top>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </top>
+                                    <center>
+                                       <ImageView fitHeight="56.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/gas-pump.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="7" GridPane.rowIndex="10">
+                                                <top>
+                                                    <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" translateY="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </top>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="8" GridPane.rowIndex="10">
+                                                <top>
+                                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" BorderPane.alignment="CENTER" />
+                                                </top>
+                                    <center>
+                                       <ImageView fitHeight="85.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" translateX="-7.5" translateY="5.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileCommunity.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="9" GridPane.rowIndex="10">
+                                                <top>
+                                                    <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="21.0" prefWidth="63.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" translateY="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </top>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" GridPane.columnIndex="4" GridPane.rowIndex="10">
+                                                <top>
+                                                    <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" translateY="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </top>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="TileStart" GridPane.columnIndex="10" GridPane.rowIndex="10">
+                                                <center>
+                                                    <Text fill="WHITE" rotate="315.0" strokeType="OUTSIDE" strokeWidth="0.0" visible="false" BorderPane.alignment="CENTER" />
+                                                </center>
+                                    <bottom>
+                                       <ImageView fitHeight="32.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateY="10.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileDepartFleche.png" />
+                                          </image>
+                                       </ImageView>
+                                    </bottom>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="9">
+                                                <left>
+                                                    <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="8">
+                                                <left>
+                                                    <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="8.0" BorderPane.alignment="CENTER" />
+                                                </left>
+                                    <center>
+                                       <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" translateX="2.5" translateY="-7.5" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/toll-road.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="7">
+                                                <left>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="6">
+                                                <left>
+                                                    <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-5.0" BorderPane.alignment="CENTER" />
+                                                </left>
+                                    <center>
+                                       <ImageView fitHeight="182.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" translateX="15.0" translateY="-2.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileChance.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="5">
+                                                <left>
+                                                    <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-4.0" BorderPane.alignment="CENTER" />
+                                                </left>
+                                    <center>
+                                       <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" translateX="10.0" translateY="-2.0" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileRocket.png" />
+                                          </image>
+                                          <effect>
+                                             <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                          </effect>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="4">
+                                                <left>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="3">
+                                                <left>
+                                                    <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-18.0" BorderPane.alignment="CENTER" />
+                                                </left>
+                                    <center>
+                                       <ImageView fitHeight="85.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" translateX="12.5" translateY="2.5" BorderPane.alignment="CENTER">
+                                          <image>
+                                             <Image url="@../pictures/imagesBoard/tileCommunity.png" />
+                                          </image>
+                                       </ImageView>
+                                    </center>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="2">
+                                                <left>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane minHeight="40.0" minWidth="65.0" prefHeight="40.0" prefWidth="65.0" styleClass="PlacementOfBoardCol" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                                                <left>
+                                                    <HBox alignment="CENTER" minWidth="-Infinity" prefWidth="21.0" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Text fill="WHITE" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="25.0" />
+                                                        </children>
+                                                    </HBox>
+                                                </left>
+                                            </BorderPane>
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                            <Pane prefHeight="65.0" prefWidth="192.0" style="-fx-background-color: transparent;" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="9" GridPane.rowIndex="5">
+                                                <children>
+                                                    <Pane layoutX="55.0" layoutY="-259.0" prefHeight="583.0" prefWidth="8.0" />
+                                                </children>
+                                            </Pane>
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                <children>
+                                                    <Pane layoutY="-258.0" prefHeight="582.0" prefWidth="8.0" />
+                                                </children>
+                                            </Pane>
+                                            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                                                <children>
+                                                    <Pane layoutX="-259.0" layoutY="56.0" prefHeight="8.0" prefWidth="581.0" />
+                                                </children>
+                                            </Pane>
+                                            <BorderPane fx:id="cardsCommunity1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="350.0" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                                <center>
+                                                    <ImageView fitHeight="296.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                                        <image>
+                                                            <Image url="@../pictures/logoiconejeu/LogoSpaceMonopoly.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                </center>
+                                            </BorderPane>
+                                            <BorderPane fx:id="cardsCommunity11" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="481.0" translateX="340.0" translateY="340.0">
+                                                <center>
+                                                    <ImageView fx:id="imgViewCardComOrChance" fitHeight="337.0" fitWidth="450.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                                                </center>
+                                            </BorderPane>
+                                            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" translateX="20.0" translateY="20.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                <center>
+                                                    <Pane BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Group fx:id="groupCardsCommunity" layoutX="100.80000305175781" layoutY="100.80000305175781" />
+                                                            <BorderPane fx:id="borderPaneCardCommunity" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" translateY="-80.0">
+                                                                <top>
+                                                                    <Pane fx:id="paneCardImgCommunity" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" rotate="-45.0" scaleX="0.2" scaleY="0.2" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" styleClass="bgCardCommunity" BorderPane.alignment="CENTER" />
+                                                                </top>
+                                                                <center>
+                                                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" rotate="-45.0" scaleX="0.2" scaleY="0.2" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" styleClass="bgCardCommunity" translateY="-100.0" BorderPane.alignment="CENTER" />
+                                                                </center>
+                                                            </BorderPane>
+                                                        </children>
+                                                    </Pane>
+                                                </center>
+                                            </BorderPane>
+                                            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="546.0" style="-fx-background-color: transparent;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                                <left>
+                                                    <Pane fx:id="PlacementOfDice" BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Group fx:id="groupDice" layoutX="228.0" layoutY="221.0" />
+                                                        </children>
+                                                    </Pane>
+                                                </left>
+                                            </BorderPane>
+                                            <BorderPane fx:id="cardsChance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" translateX="-20.0" translateY="-20.0" GridPane.columnIndex="8" GridPane.rowIndex="8">
+                                                <center>
+                                                    <Pane BorderPane.alignment="CENTER">
+                                                        <children>
+                                                            <Group fx:id="groupChanceCards" layoutX="100.80000305175781" layoutY="100.80000305175781" />
+                                                            <BorderPane fx:id="borderPaneCardChance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" translateY="-80.0">
+                                                                <top>
+                                                                    <Pane fx:id="paneCardImgChance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" rotate="-45.0" scaleX="0.2" scaleY="0.2" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" styleClass="bgCardChance" BorderPane.alignment="CENTER" />
+                                                                </top>
+                                                                <center>
+                                                                    <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" rotate="-45.0" scaleX="0.2" scaleY="0.2" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-radius: 8;" styleClass="bgCardChance" translateY="-100.0" BorderPane.alignment="CENTER" />
+                                                                </center>
+                                                            </BorderPane>
+                                                        </children>
+                                                    </Pane>
+                                                </center>
+                                            </BorderPane>
+                                        </GridPane>
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="745.0" prefWidth="20.0" rotate="90.0" style="-fx-background-color: linear-gradient(to right, #000D1A, #001A34); -fx-background-radius: 0px 0px 100px 0px;" translateX="-393.3" translateY="393.0" visible="false">
+                                            <children>
+                                                <Pane layoutY="752.0" prefHeight="30.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to right, #000D1A, #001A34);" translateY="-8.5" visible="false" />
+                                                <Polygon layoutX="10.0" layoutY="762.0" points="10.0, -13.20635986328125, -9.5, -2.5, -9.5, 11.20001220703125" stroke="TRANSPARENT" strokeType="INSIDE" translateX="-0.5" translateY="-16.0">
+                                                    <fill>
+                                                        <LinearGradient endX="1.0" startY="0.9241706161137441">
+                                                            <stops>
+                                                                <Stop>
+                                                                    <color>
+                                                                        <Color green="0.05098039284348488" blue="0.10196078568696976" />
+                                                                    </color>
+                                                                </Stop>
+                                                                <Stop offset="1.0">
+                                                                    <color>
+                                                                        <Color green="0.10196078568696976" blue="0.20392157137393951" />
+                                                                    </color>
+                                                                </Stop>
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </fill>
+                                                </Polygon>
+                                                <Line endX="8.362594604492188" endY="9.998270988464355" layoutX="18.0" layoutY="729.0" rotate="-48.8" startX="-5.6255717277526855" startY="22.01806640625" stroke="#001a34" strokeWidth="2.0" translateX="-0.42" translateY="-22.3" />
+                                                <Pane layoutY="-4.0" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to right, #000D1A, #001A34);" translateY="-7.0" />
+                                            </children>
+                                        </Pane>
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="735.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to right, #000D1A, #001A34); -fx-background-radius: 0px 100px 0px 0px;" translateX="-20.0" translateY="8.0" visible="false">
+                                            <children>
+                                                <Polygon layoutX="13.0" layoutY="44.0" points="-12.99993896484375, -32.9375, 7.00006103515625, -47.0, -13.228515625, -68.05342102050781" stroke="TRANSPARENT" strokeType="INSIDE">
+                                                    <fill>
+                                                        <LinearGradient endX="1.0" endY="1.0" startY="0.9241706161137441">
+                                                            <stops>
+                                                                <Stop>
+                                                                    <color>
+                                                                        <Color green="0.05098039284348488" blue="0.10196078568696976" />
+                                                                    </color>
+                                                                </Stop>
+                                                                <Stop offset="1.0">
+                                                                    <color>
+                                                                        <Color green="0.10196078568696976" blue="0.20392157137393951" />
+                                                                    </color>
+                                                                </Stop>
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </fill>
+                                                </Polygon>
+                                                <Polygon layoutX="23.0" layoutY="54.0" points="-1.99993896484375, -29.8125, -1.99993896484375, -58.25, -22.228515625, -78.05342102050781" stroke="TRANSPARENT" strokeType="INSIDE" translateX="-1.0">
+                                                    <fill>
+                                                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.05213270142180093">
+                                                            <stops>
+                                                                <Stop>
+                                                                    <color>
+                                                                        <Color green="0.05098039284348488" blue="0.10196078568696976" />
+                                                                    </color>
+                                                                </Stop>
+                                                                <Stop offset="1.0">
+                                                                    <color>
+                                                                        <Color green="0.10196078568696976" blue="0.20392157137393951" />
+                                                                    </color>
+                                                                </Stop>
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </fill>
+                                                </Polygon>
+                                                <Pane layoutY="720.0" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to right, #000D1A, #001A34);" translateY="3.0" />
+                                                <Pane prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to bottom, #000D1A, #001A34);" translateY="742.5" />
+                                                <Pane prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: linear-gradient(to bottom, #000D1A, #001A34);" translateY="741.0">
+                                                    <children>
+                                                        <Polygon layoutX="-4.0" layoutY="16.0" points="4.0, -16.0, 24.0, 3.9999752044677734, 24.0, -16.0" stroke="TRANSPARENT" strokeType="INSIDE">
+                                                            <fill>
+                                                                <LinearGradient endX="1.0" endY="1.0" startY="0.9241706161137441">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color green="0.05098039284348488" blue="0.10196078568696976" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color green="0.10196078568696976" blue="0.20392157137393951" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </fill>
+                                                        </Polygon>
+                                                        <Polygon layoutX="5.0" layoutY="27.0" points="-5.0, -26.0, 15.0, -6.000024795532227, -5.0, -6.000024795532227" stroke="TRANSPARENT" strokeType="INSIDE" translateY="-2.0">
+                                                            <fill>
+                                                                <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.05213270142180093">
+                                                                    <stops>
+                                                                        <Stop>
+                                                                            <color>
+                                                                                <Color green="0.05098039284348488" blue="0.10196078568696976" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                        <Stop offset="1.0">
+                                                                            <color>
+                                                                                <Color green="0.10196078568696976" blue="0.20392157137393951" />
+                                                                            </color>
+                                                                        </Stop>
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </fill>
+                                                        </Polygon>
+                                                    </children>
+                                                </Pane>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </center>
+                </BorderPane>
+                <BorderPane maxWidth="1536.0" minWidth="-Infinity" prefWidth="1536.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <Pane fx:id="paneMissingMoney" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="114.0" prefWidth="1536.0" style="-fx-background-color: linear-gradient(to bottom, #000D1A, #001A34);" translateY="300.0" visible="false" BorderPane.alignment="CENTER">
+                            <children>
+                                <Pane fx:id="paneBackgroundForAllAnimation" maxWidth="-Infinity" prefWidth="1536.0" translateX="-1536.0">
+                                    <children>
+                                        <Label fx:id="labelNamePlayerMissMoney" alignment="CENTER" layoutX="503.0" layoutY="26.0" prefHeight="68.0" styleClass="font-Size-Price-Buyable" />
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="1536.0" style="-fx-background-color: white;" />
+                                        <Pane layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="1536.0" style="-fx-background-color: white;" />
+                                    </children>
+                                </Pane>
+                                <ImageView fitHeight="480.0" fitWidth="406.0" layoutX="680.0" layoutY="-71.0" pickOnBounds="true" preserveRatio="true" translateX="100.0" translateY="-100.0">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/action-NoMoney.png" />
+                                    </image>
+                                </ImageView>
+                                <Pane fx:id="paneNoMoneyPossesion" maxHeight="-Infinity" maxWidth="-Infinity" scaleX="0.9" scaleY="0.9" translateX="400.0" translateY="-220.0">
+                                    <children>
+                                        <Pane layoutX="-39.0" layoutY="-13.0" prefHeight="140.0" prefWidth="453.0" style="-fx-background-color: white; -fx-background-radius: 8;" translateX="25.0">
+                                            <children>
+                                                <Text fill="WHITE" layoutX="45.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: black; -fx-text-alignment: center;" styleClass="PoliceNameTileBuyableLabel" text="Vous ne possédez pas l'argent nécessaire pour faire cette action" wrappingWidth="363.147705078125">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                                <Polygon fill="WHITE" layoutX="406.0" layoutY="98.0" points="69.0, 61.96099853515625, -6.166015625, 33.0, 34.833984375, -13.0" stroke="WHITE" strokeType="INSIDE" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                    </top>
+                    <center>
+                        <StackPane maxWidth="1536.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <VBox alignment="CENTER" translateY="-150.0">
+                                    <children>
+                                        <Pane fx:id="paneCard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" style="-fx-border-color: white; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8; -fx-border-radius: 8;" translateY="800.0" visible="false">
+                                            <children>
+                                                <Text fx:id="textNameCard" fill="WHITE" layoutX="22.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" styleClass="PoliceNameTileBuyableLabel" text="VOUS ÊTES LIBÉRÉ DE PRISON" textAlignment="CENTER" translateX="-10.0" wrappingWidth="550.8000183105469">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Text>
+                                                <Pane layoutX="13.0" layoutY="14.0" prefHeight="53.0" prefWidth="550.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                                                    <children>
+                                                        <Text fx:id="textTypeCard" fill="WHITE" layoutX="48.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="CardsCommunity-ChanceFS" textAlignment="CENTER" wrappingWidth="454.2667236328125">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                </Pane>
+                                                <Pane fx:id="paneAnimationNamePlayer" layoutX="265.0" layoutY="2.0" prefHeight="120.0" prefWidth="45.0" translateY="-140.0" visible="false">
+                                                    <children>
+                                                        <Pane fx:id="scalePaneAnimationCards" prefHeight="80.0" prefWidth="45.0" style="-fx-background-radius: 6;" translateX="-3.0" translateY="20.0" />
+                                                        <Pane fx:id="fadePaneAnimationCards" opacity="0.0" prefHeight="78.0" prefWidth="540.0" style="-fx-background-radius: 15;" styleClass="PoliceNameTileBuyableLabel" translateX="-248.0" translateY="21.0">
+                                                            <children>
+                                                                <Label fx:id="labelNamePlayer" alignment="CENTER" layoutX="154.0" layoutY="7.0" prefHeight="65.0" prefWidth="232.0" styleClass="PaneCardNamePlayer" textFill="WHITE" />
+                                                            </children>
+                                                            <effect>
+                                                                <Bloom threshold="0.64" />
+                                                            </effect>
+                                                        </Pane>
+                                                        <Label fx:id="bracket1" contentDisplay="CENTER" layoutX="18.0" layoutY="-50.0" maxHeight="110.0" maxWidth="38.0" prefHeight="110.0" prefWidth="38.0" rotate="180.0" scaleX="1.4" scaleY="1.4" text="]" translateX="-40.0" translateY="49.5">
+                                                            <font>
+                                                                <Font size="96.0" />
+                                                            </font>
+                                                            <effect>
+                                                                <Bloom threshold="0.95" />
+                                                            </effect>
+                                                        </Label>
+                                                        <Label fx:id="bracket2" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="-13.0" maxHeight="110.0" maxWidth="38.0" prefHeight="110.0" prefWidth="38.0" scaleX="1.4" scaleY="1.4" text="]" translateX="10.0" translateY="-8.5">
+                                                            <font>
+                                                                <Font size="96.0" />
+                                                            </font>
+                                                            <effect>
+                                                                <Bloom threshold="0.95" />
+                                                            </effect>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Pane fx:id="boxDescriptionForChaAndCom" layoutX="221.0" layoutY="153.0" opacity="0.0" prefHeight="120.0" prefWidth="312.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                    <children>
+                                                        <Label fx:id="labelDescriptionCard" alignment="CENTER" layoutX="17.0" layoutY="10.0" prefHeight="100.0" prefWidth="279.0" style="-fx-text-fill: black;" styleClass="PoliceBuyableLabelPrice" textAlignment="JUSTIFY" wrapText="true">
+                                                            <padding>
+                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <Polygon fill="WHITE" layoutX="-106.0" layoutY="129.0" points="120.0, -58.0, 53.0, -52.0, 113.0, -87.0" stroke="WHITE" strokeType="INSIDE" />
+                                                    </children>
+                                                </Pane>
+                                                <ImageView fx:id="imgAction_ChaAndCom" fitHeight="206.0" fitWidth="156.0" layoutX="22.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" translateY="7.0">
+                                                    <image>
+                                                        <Image url="@../pictures/imagesBoard/action-Cards.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                    <children>
+                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" translateY="-70.0">
+                                            <children>
+                                                <StackPane fx:id="stackPaneThrowDice" layoutY="75.0" prefHeight="150.0" prefWidth="200.0" translateY="-800.0" visible="false">
+                                                    <children>
+                                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" translateX="100.0" translateY="-250.0">
+                                                            <children>
+                                                                <ImageView fx:id="imgRayonSunThrowDice" fitHeight="287.0" fitWidth="310.0" pickOnBounds="true" preserveRatio="true" translateY="-300.0" visible="false">
+                                                                    <image>
+                                                                        <Image url="@../pictures/imagesBoard/rayon-sun.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </children>
+                                                        </Pane>
+                                                        <ImageView fitHeight="498.0" fitWidth="436.0" pickOnBounds="true" preserveRatio="true" translateY="-100.0">
+                                                            <image>
+                                                                <Image url="@../pictures/imagesBoard/action-ThrowDices.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <ImageView fitHeight="432.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" translateX="-100.0">
+                                                            <image>
+                                                                <Image url="@../pictures/imagesBoard/action-ThrowDiceMrMonopoly.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" translateX="100.0" translateY="-250.0">
+                                                            <children>
+                                                                <Label fx:id="labelThrowDiceResult" alignment="CENTER" contentDisplay="CENTER" layoutX="-28.0" layoutY="3.0" prefHeight="273.0" prefWidth="493.0" style="-fx-text-fill: #EAC612;" styleClass="font-SizeUpdateMoney" text="7" textAlignment="CENTER" translateY="-300.0" visible="false">
+                                                                    <effect>
+                                                                        <DropShadow />
+                                                                    </effect>
+                                                                </Label>
+                                                            </children>
+                                                        </Pane>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+                                                    </padding>
+                                                </StackPane>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                                    <children>
+                                        <StackPane fx:id="stackPaneUpdateMoney" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1805.0" scaleX="0.9" scaleY="0.9" translateY="-150.0" visible="false">
+                                            <children>
+                                                <Pane fx:id="imgViewRayonSunAnim" maxHeight="-Infinity" maxWidth="-Infinity">
+                                                    <children>
+                                                        <ImageView fitHeight="710.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pictures/imagesBoard/rayon-sun.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </Pane>
+                                                <Pane fx:id="panePassageTileStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="500.0" prefWidth="500.0">
+                                                    <children>
+                                                        <ImageView fitHeight="500.0" fitWidth="417.0" layoutY="36.79999542236328" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pictures/imagesBoard/action-updateMoney.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Pane layoutX="253.20001220703125" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="133.0" prefWidth="432.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                                            <children>
+                                                                <Label fx:id="labelPassageStart" alignment="CENTER" layoutX="11.0" layoutY="17.0" prefHeight="100.0" prefWidth="411.0" style="-fx-text-fill: black;" styleClass="PoliceBuyableLabelPrice" textAlignment="JUSTIFY" wrapText="true">
+                                                                    <padding>
+                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                    </padding>
+                                                                </Label>
+                                                                <Polygon fill="WHITE" layoutX="-17.0" layoutY="172.0" points="39.30598068237305, -38.39997863769531, -0.22343826293945312, -23.482315063476562, 17.000072479248047, -64.89408874511719" stroke="WHITE" strokeType="INSIDE" />
+                                                            </children>
+                                                        </Pane>
+                                                    </children>
+                                                </Pane>
+                                                <Label fx:id="labelUpdateMoney" alignment="CENTER" contentDisplay="CENTER" opacity="0.0" prefHeight="273.0" prefWidth="472.0" style="-fx-text-fill: #EAC612;" styleClass="font-SizeUpdateMoney" textAlignment="CENTER">
+                                                    <effect>
+                                                        <DropShadow />
+                                                    </effect>
+                                                </Label>
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </VBox>
+                            <BorderPane maxWidth="1536.0" translateY="-200.0">
+                           <center>
+                                    <Pane fx:id="paneBeginTurn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="145.0" prefWidth="548.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" BorderPane.alignment="CENTER">
+                                        <children>
+                                            <Pane layoutX="25.0" layoutY="47.0" prefHeight="62.0" prefWidth="520.0" style="-fx-background-color: transparent; -fx-background-radius: 8;">
+                                                <children>
+                                                    <Text fill="WHITE" layoutX="10.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceNameTileBuyableLabel" text="À votre tour de jouer : ">
+                                                        <font>
+                                                            <Font size="14.0" />
+                                                        </font>
+                                                    </Text>
+                                                    <Text fx:id="textActivePlayer" fill="WHITE" layoutX="260.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceNameTileBuyableLabel" wrappingWidth="252.5087890625">
+                                                        <font>
+                                                            <Font size="14.0" />
+                                                        </font>
+                                                    </Text>
+                                                    <Circle fx:id="circleAnimationQuickly" fill="TRANSPARENT" radius="100.0" stroke="TRANSPARENT" strokeType="INSIDE" translateX="10.0" />
+                                                </children>
+                                                <padding>
+                                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                </padding>
+                                            </Pane>
+                                            <Pane layoutX="493.0" layoutY="-50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="105.0" scaleX="0.8" scaleY="0.8" style="-fx-border-color: white;" styleClass="ImgPionPlayer" visible="false">
+                                                <children>
+                                                    <ImageView fx:id="imagePawnPlayerBeginTurn" fitHeight="75.0" fitWidth="75.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0" />
+                                                </children>
+                                            </Pane>
+                                        </children>
+                                    </Pane>
+                           </center>
+                            </BorderPane>
+                                <HBox fx:id="imageNotif" alignment="CENTER" maxWidth="-Infinity" prefWidth="1536.0" translateY="-100.0" StackPane.alignment="CENTER">
+                                    <children>
+                                        <Pane fx:id="paneBuyableTileAnim" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" scaleX="0.95" scaleY="0.95" translateX="-100.0" visible="false">
+                                            <children>
+                                                <Pane fx:id="PaneNamePlayerBuyableTile" layoutX="4.0" maxWidth="1622.0" prefHeight="119.0" prefWidth="1617.0" style="-fx-background-color: linear-gradient(to bottom, #000D1A, #001A34);" translateX="-315.0" translateY="100.0" visible="false">
+                                                    <children>
+                                                        <Pane fx:id="paneBackgroundForAllAnimationBuyable" maxWidth="1622.0" minWidth="-Infinity" prefHeight="119.0" prefWidth="1617.0" visible="false">
+                                                            <children>
+                                                                <Label fx:id="labelNamePlayerBuyableTile" alignment="CENTER" layoutX="503.0" layoutY="26.0" maxWidth="368.0" minWidth="-Infinity" prefHeight="68.0" prefWidth="368.0" styleClass="font-Size-Price-Buyable" translateX="110.0" />
+                                                                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="10.0" prefWidth="1617.0" style="-fx-background-color: white;" />
+                                                                <Pane layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="1617.0" style="-fx-background-color: white;" />
+                                                            </children>
+                                                        </Pane>
+                                                        <Pane layoutX="575.0" layoutY="10.0" translateY="150.0">
+                                                            <children>
+                                                                <Pane fx:id="paneParticulariity" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="445.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" visible="false">
+                                                                    <children>
+                                                                        <Pane layoutX="15.0" layoutY="14.0" prefHeight="53.0" prefWidth="416.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                                                                            <children>
+                                                                                <Text fill="WHITE" layoutX="53.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="CardsCommunity-ChanceFS" text="Particularité" wrappingWidth="309.61327934265137">
+                                                                                    <font>
+                                                                                        <Font size="14.0" />
+                                                                                    </font>
+                                                                                </Text>
+                                                                            </children>
+                                                                        </Pane>
+                                                                        <ImageView fx:id="imgParticularity" fitHeight="145.0" fitWidth="82.0" layoutX="347.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                                                            <image>
+                                                                                <Image url="@../pictures/imagesBoard/tileWater.png" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <Label fx:id="descriptionParticularity" alignment="TOP_LEFT" layoutX="11.0" layoutY="83.0" prefHeight="134.0" prefWidth="317.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabelPrice" text="On multiplies par 4 la somme des deux dés, si l'on possède UNE seule carte de Compagnie de Distribution." wrapText="true">
+                                                                            <padding>
+                                                                                <Insets bottom="5.0" left="7.0" right="5.0" top="5.0" />
+                                                                            </padding>
+                                                                        </Label>
+                                                                        <Label layoutX="187.0" layoutY="179.0" prefHeight="29.0" prefWidth="70.0" style="-fx-background-color: #154079; -fx-background-radius: 100;" text="  " />
+                                                                        <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="224.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" translateX="15.0">
+                                                                            <image>
+                                                                                <Image url="@../pictures/imagesBoard/gifClick.gif" />
+                                                                            </image>
+                                                                        </ImageView>
+                                                                        <MFXButton fx:id="clickTurnDescriptionParticularaity" buttonType="RAISED" depthLevel="LEVEL4" layoutX="188.0" layoutY="179.0" minHeight="20.0" prefHeight="29.0" prefWidth="65.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: transparent;" text="CLICK !" />
+                                                                        <MFXButton fx:id="clickTurnDescriptionParticularaity2" buttonType="RAISED" depthLevel="LEVEL4" layoutX="188.0" layoutY="179.0" minHeight="20.0" prefHeight="29.0" prefWidth="65.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: transparent;" text="CLICK !" visible="false" />
+                                                                    </children>
+                                                                </Pane>
+                                                            </children>
+                                                        </Pane>
+                                                    </children>
+                                                </Pane>
+                                                <ImageView fitHeight="507.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../pictures/imagesBoard/action-Buyable.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fitHeight="203.0" fitWidth="288.0" layoutX="234.0" pickOnBounds="true" preserveRatio="true" translateY="-70.0">
+                                                    <image>
+                                                        <Image url="@../pictures/imagesBoard/bule-Conversation.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label fx:id="labelTilePriceBigSize" alignment="CENTER" layoutX="288.0" layoutY="-26.0" prefHeight="53.0" prefWidth="131.0" style="-fx-text-fill: black;" styleClass="font-Size-Price-Buyable" translateX="-7.0" translateY="-5.0" />
+                                            </children>
+                                        </Pane>
+
+                                        <Pane fx:id="paneBuyableTile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="273.0" rotate="5.0" scaleX="1.15" scaleY="1.15" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" translateX="150.0" translateY="800.0" visible="false">
+                                            <children>
+                                                <Text fill="WHITE" layoutX="97.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" styleClass="PoliceRentBuyableLabel" text="Loyer :" translateX="-10.0" wrappingWidth="63.53125" />
+                                                <Text fx:id="valueRentTilePrice" fill="WHITE" layoutX="175.0" layoutY="105.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" styleClass="PoliceRentBuyableLabel" translateX="-10.0" wrappingWidth="84.13671875">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                                <Pane layoutX="15.0" layoutY="109.0" prefHeight="331.0" prefWidth="244.0" style="-fx-background-color: transparent;">
+                                                    <children>
+                                                        <Label layoutX="22.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Avec 1 Habitation :" textFill="WHITE" translateX="-10.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="22.0" layoutY="60.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Avec 2 Habitations :" textFill="WHITE" translateX="-10.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="22.0" layoutY="84.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Avec 3 Habitations :" textFill="WHITE" translateX="-10.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="22.0" layoutY="110.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Avec 4 Habitations :" textFill="WHITE" translateX="-10.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelUneBase" layoutX="177.0" layoutY="34.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelDeuxBase" layoutX="177.0" layoutY="60.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelTroisBase" layoutX="177.0" layoutY="83.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelQuatreBase" layoutX="177.0" layoutY="109.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelUneStation" layoutX="177.0" layoutY="134.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="22.0" layoutY="135.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Avec 1 Base Spatiale :" textFill="WHITE" translateX="-10.0" translateY="-10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="nameObjectPrice1" layoutX="49.0" layoutY="14.0" />
+                                                        <Label fx:id="nameObjectPrice2" layoutX="49.0" layoutY="40.0" />
+                                                        <Label fx:id="nameObjectPrice3" layoutX="49.0" layoutY="63.0" />
+                                                        <Label fx:id="nameObjectPrice4" layoutX="49.0" layoutY="89.0" />
+                                                        <Label fx:id="nameObjectPrice5" layoutX="49.0" layoutY="114.0" />
+                                                        <Line fx:id="bgFamilyColorPrice" endX="136.99998474121094" layoutX="96.0" layoutY="170.0" startX="-76.72164916992188" stroke="#154079" strokeLineCap="ROUND" strokeWidth="25.0" translateX="-1.0" translateY="1.0" />
+                                                        <Label layoutX="22.0" layoutY="173.0" prefHeight="15.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabelPrice" text="Prix d'Achat :" textFill="WHITE" translateX="-10.0" translateY="-15.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelTilePrice" alignment="CENTER_RIGHT" layoutX="157.0" layoutY="173.0" prefHeight="24.0" prefWidth="53.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabelPrice" textFill="WHITE" translateX="22.0" translateY="-15.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Pane fx:id="imgBuyTile" layoutX="39.0" layoutY="260.0" translateX="-2.0" visible="false">
+                                                            <children>
+                                                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pictures/imageCreatePlayer/correct.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </children>
+                                                        </Pane>
+                                                        <Pane fx:id="imgNoBuyTile" layoutX="138.0" layoutY="260.0" visible="false">
+                                                            <children>
+                                                                <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pictures/imagesBoard/remove.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </children>
+                                                        </Pane>
+                                                        <Label layoutX="22.0" layoutY="191.0" prefHeight="15.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Prix d'une Habitation :" textFill="WHITE" translateX="-10.0" translateY="5.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="22.0" layoutY="209.0" prefHeight="15.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Prix d'une Base :" textFill="WHITE" translateX="-10.0" translateY="10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelHousePrice" layoutX="177.0" layoutY="191.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="5.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="labelHotelPrice" layoutX="177.0" layoutY="209.0" style="-fx-text-fill: white;" styleClass="PoliceBuyableLabel" text="Label" textFill="WHITE" translateX="20.0" translateY="10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <MFXButton fx:id="buy" alignment="BASELINE_CENTER" buttonType="RAISED" depthLevel="LEVEL4" layoutX="2.0" layoutY="260.0" onAction="#onClickYes" rippleColor="WHITE" text="Acheter" textFill="WHITE" translateX="35.0">
+                                                            <styleClass>
+                                                                <String fx:value="PoliceBuyableLabel" />
+                                                                <String fx:value="btnChoiceYesOrNo" />
+                                                            </styleClass>
+                                                        </MFXButton>
+                                                        <MFXButton fx:id="noBuy" buttonType="RAISED" depthLevel="LEVEL4" layoutX="173.0" layoutY="260.0" onAction="#onClickNo" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="Passer" textFill="WHITE" translateX="-35.0">
+                                                            <styleClass>
+                                                                <String fx:value="PoliceBuyableLabel" />
+                                                                <String fx:value="btnChoiceYesOrNo" />
+                                                            </styleClass>
+                                                        </MFXButton>
+                                                    </children>
+                                                </Pane>
+                                                <Pane fx:id="bgFamilyColor" layoutX="15.0" layoutY="14.0" prefHeight="53.0" prefWidth="244.0" style="-fx-background-color: #154079; -fx-background-radius: 8;">
+                                                    <children>
+                                                        <Text fx:id="nameBuyableTile" fill="WHITE" layoutX="16.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceNameTileBuyableLabel" wrappingWidth="211.61327934265137">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Text>
+                                                    </children>
+                                                </Pane>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </HBox>
+            
+                  
+                                                  <VBox fx:id="vBoxAddProperty" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="468.0" style="-fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-border-radius: 8; -fx-background-radius: 8; -fx-border-color: white;" translateY="-150.0" visible="false">
+                                    <children>
+                                        <Pane nodeOrientation="LEFT_TO_RIGHT" translateX="15.0" translateY="-25.0">
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets top="15.0" />
+                                            </padding>
+                                        </Pane>
+                                        <HBox alignment="CENTER" maxHeight="53.0" maxWidth="430.0" minHeight="53.0" minWidth="400.0" prefHeight="53.0" prefWidth="430.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;" translateY="-25.0">
+                                            <children>
+                                                <Text fx:id="nameTileBuyable1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" text="Quelle case voulez vous cibler pour mettre une habitation ?" wrappingWidth="392.0">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </HBox>
+                                        <MFXScrollPane fx:id="scrollBar" hbarPolicy="NEVER" prefHeight="223.0" prefWidth="436.0" thumbColor="#003161" thumbHoverColor="#7d3cff" trackColor="#01152a" translateY="5.0">
+                                            <content>
+                                                <VBox fx:id="contentsBox" prefHeight="53.0" prefWidth="420.0" />
+                                            </content>
+                                        </MFXScrollPane>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                    </padding>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </VBox>
+                                <Pane fx:id="paneAlerteInfo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="575.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" translateY="-145.0" visible="false">
+                                    <children>
+                                        <Pane fx:id="paneAnimationNamePlayerAlertInfo" layoutX="266.0" layoutY="-60.0" prefHeight="120.0" prefWidth="45.0" translateY="-80.0" visible="false">
+                                            <children>
+                                                <Pane fx:id="scalePaneAnimationCardsAlertInfo" prefHeight="80.0" prefWidth="45.0" style="-fx-background-radius: 6;" translateX="-3.0" translateY="20.0" />
+                                                <Pane fx:id="fadePaneAnimationCardsAlertInfo" opacity="0.0" prefHeight="78.0" prefWidth="540.0" style="-fx-background-radius: 15;" styleClass="PoliceNameTileBuyableLabel" translateX="-248.0" translateY="21.0">
+                                                    <children>
+                                                        <Label fx:id="labelNamePlayerAlertInfo" alignment="CENTER" layoutX="154.0" layoutY="7.0" prefHeight="65.0" prefWidth="232.0" styleClass="PaneCardNamePlayer" textFill="WHITE" />
+                                                    </children>
+                                                    <effect>
+                                                        <Bloom threshold="0.64" />
+                                                    </effect>
+                                                </Pane>
+                                                <Label fx:id="bracketAlertInfo1" contentDisplay="CENTER" layoutX="18.0" layoutY="-50.0" maxHeight="110.0" maxWidth="38.0" prefHeight="110.0" prefWidth="38.0" rotate="180.0" scaleX="1.4" scaleY="1.4" text="]" translateX="-40.0" translateY="49.5">
+                                                    <font>
+                                                        <Font size="96.0" />
+                                                    </font>
+                                                    <effect>
+                                                        <Bloom threshold="0.95" />
+                                                    </effect>
+                                                </Label>
+                                                <Label fx:id="bracketAlertInfo2" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="-13.0" maxHeight="110.0" maxWidth="38.0" prefHeight="110.0" prefWidth="38.0" scaleX="1.4" scaleY="1.4" text="]" translateX="10.0" translateY="-8.5">
+                                                    <font>
+                                                        <Font size="96.0" />
+                                                    </font>
+                                                    <effect>
+                                                        <Bloom threshold="0.95" />
+                                                    </effect>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="15.0" layoutY="14.0" prefHeight="53.0" prefWidth="546.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                                            <children>
+                                                <Text fill="WHITE" layoutX="118.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="CardsCommunity-ChanceFS" text="Alerte info" wrappingWidth="309.61327934265137">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </Pane>
+                                        <MFXButton fx:id="no" buttonType="RAISED" depthLevel="LEVEL4" disable="true" layoutX="40.0" layoutY="250.0" onAction="#onClickNoForUseCard" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="non" textFill="WHITE" visible="false">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="yes" buttonType="RAISED" depthLevel="LEVEL4" disable="true" layoutX="270.0" layoutY="250.0" onAction="#onClickUseExitCard" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="oui" textFill="WHITE" visible="false">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="payFine" buttonType="RAISED" depthLevel="LEVEL4" disable="true" layoutX="264.0" layoutY="250.0" onAction="#onClickPayFine" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="payer" textFill="WHITE" visible="false">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="noPayFine" buttonType="RAISED" depthLevel="LEVEL4" disable="true" layoutX="30.0" layoutY="250.0" onAction="#onClickNoForPayFine" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text=" pas payer" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="understood" buttonType="RAISED" depthLevel="LEVEL4" layoutX="253.0" layoutY="250.0" onAction="#onClickUnderstood" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="Compris" textFill="WHITE" visible="false">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <ImageView fx:id="imgAlertInfo" fitHeight="230.0" fitWidth="145.0" layoutX="408.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pictures/imagesBoard/action-info_.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Pane fx:id="paneNoMoneyPossesion1" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="414.0" scaleX="0.8" scaleY="0.8" />
+                                        <Pane fx:id="boxDescriptionAlertInfo" layoutX="41.0" layoutY="90.0" opacity="0.0" prefHeight="120.0" prefWidth="312.0" style="-fx-background-color: white; -fx-background-radius: 8;">
+                                            <children>
+                                                <Label fx:id="DescriptionAlerte" alignment="TOP_LEFT" layoutX="16.0" layoutY="9.0" prefHeight="120.0" prefWidth="280.0" style="-fx-text-fill: Black;" styleClass="PoliceBuyableLabelPrice" wrapText="true">
+                                                    <padding>
+                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                    </padding>
+                                                </Label>
+                                                <Polygon fill="WHITE" layoutX="221.0" layoutY="105.0" points="131.0, -28.03900146484375, 64.0, -34.03900146484375, 79.0, -70.03900146484375" stroke="WHITE" strokeType="INSIDE" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="paneCardSellingSpace" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="375.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" visible="false">
+                                    <children>
+                                        <Pane layoutX="15.0" layoutY="14.0" prefHeight="53.0" prefWidth="344.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                                            <children>
+                                                <Text fx:id="descriptionOffer" fill="WHITE" layoutX="2.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceNameTileBuyableLabel" text="Vendre sa carte &quot;Sortir de prison&quot; à" wrappingWidth="339.61327934265137">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                            </children>
+                                        </Pane>
+                                        <MFXButton fx:id="btnPlayer1" layoutX="101.0" layoutY="91.0" onAction="#onClickSuggestMyCard" prefHeight="31.0" prefWidth="172.0" styleClass="btnPlayer" text="Button" visible="false" />
+                                        <MFXButton fx:id="btnPlayer3" layoutX="101.0" layoutY="179.0" onAction="#onClickSuggestMyCard" prefHeight="31.0" prefWidth="172.0" styleClass="btnPlayer" text="Button" visible="false" />
+                                        <MFXButton fx:id="btnPlayer2" layoutX="102.0" layoutY="134.0" onAction="#onClickSuggestMyCard" prefHeight="31.0" prefWidth="172.0" styleClass="btnPlayer" text="Button" visible="false" />
+                                        <Label fx:id="textOffer" alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="90.0" prefHeight="120.0" prefWidth="297.0" styleClass="Font-SizeNamePlayer" text="Aucune offre..." visible="false" />
+                                        <MFXButton fx:id="noBuyExitCard" buttonType="RAISED" depthLevel="LEVEL4" layoutX="32.0" layoutY="179.0" onAction="#onClickNoBuyExitCard" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="Rejeter" textAlignment="CENTER" textFill="WHITE" visible="false" wrapText="true">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="buyExitCard" buttonType="RAISED" depthLevel="LEVEL4" layoutX="273.0" layoutY="179.0" onAction="#onClickBuyExitCard" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="Acheter" textFill="WHITE" visible="false">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                    </children>
+                                </Pane>
+                                <Pane fx:id="paneSetting" layoutX="725.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="425.0" style="-fx-border-color: white; -fx-border-radius: 8; -fx-background-color: linear-gradient(to bottom, #000D1A, #001A34); -fx-background-radius: 8;" visible="false">
+                                    <children>
+                                        <Pane layoutX="45.0" layoutY="14.0" prefHeight="53.0" prefWidth="344.0" style="-fx-background-color: #01152a; -fx-background-radius: 8;">
+                                            <children>
+                                                <Text fx:id="descriptionOffer1" fill="WHITE" layoutX="2.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceSettingLabel" text="Paramètre" wrappingWidth="339.61327934265137">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Text>
+                                    <MFXButton fx:id="btnENDGAME" layoutX="78.0" layoutY="15.0" onAction="#onClickENDGAME" prefHeight="20.0" prefWidth="24.0" />
+                                            </children>
+                                        </Pane>
+                                        <MFXButton fx:id="muteBackgroundMusic" buttonType="RAISED" depthLevel="LEVEL4" layoutX="234.0" layoutY="76.0" onAction="#onClickMute" prefHeight="53.0" prefWidth="60.0" rippleColor="WHITE" text="Off" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceOffOrOn" />
+                                            </styleClass>
+
+
+                                        </MFXButton>
+                                        <MFXButton fx:id="volumeBackgroundMusic" buttonType="RAISED" depthLevel="LEVEL4" layoutX="325.0" layoutY="76.0" onAction="#onClickLoudVolume" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="On" textFill="WHITE">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <Text fx:id="descriptionOffer11" fill="WHITE" layoutX="27.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceSettingLabel" text="Musique de fond " wrappingWidth="189.61327934265137">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="descriptionOffer111" fill="WHITE" layoutX="27.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white; -fx-text-alignment: center;" styleClass="PoliceSettingLabel" text="Effet sonnore" wrappingWidth="189.61327934265137">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Text>
+                                        <MFXButton fx:id="muteEffectSonnore" buttonType="RAISED" depthLevel="LEVEL4" layoutX="234.0" layoutY="166.0" onAction="#onClickMuteEffectSonnore" prefHeight="53.0" prefWidth="60.0" rippleColor="WHITE" text="Off" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceOffOrOn" />
+                                            </styleClass>
+                                        </MFXButton>
+                                        <MFXButton fx:id="volumeEffectSinnore" buttonType="RAISED" depthLevel="LEVEL4" layoutX="325.0" layoutY="166.0" onAction="#onClickLoudSoundEffect" prefHeight="31.0" prefWidth="88.0" rippleColor="WHITE" text="On" textFill="WHITE">
+                                            <styleClass>
+                                                <String fx:value="PoliceBuyableLabel" />
+                                                <String fx:value="btnChoiceYesOrNo" />
+                                            </styleClass>
+                                        </MFXButton>
+
+                                    </children>
+                                </Pane>
+                            </children>
+                        </StackPane>
+                    </center>
+                </BorderPane>
+                <HBox alignment="CENTER" prefHeight="190.0" spacing="50.0" translateX="20.0" translateY="-20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Pane maxWidth="-Infinity" prefWidth="170.0">
+                            <children>
+                                <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="32.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/station-spatiale.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="circleBtnProperty" fill="#da181800" layoutX="101.0" layoutY="27.0" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="-37.1" translateY="36.0" />
+                                <MFXButton fx:id="btnProperty" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" disable="true" layoutX="4.100006103515625" layoutY="3.0999999046325684" onAction="#OnHouseButtonClicked" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" text="Button" />
+                            </children>
+                        </Pane>
+                        <Pane maxWidth="-Infinity" prefWidth="170.0">
+                            <children>
+                                <ImageView fx:id="imageViewValidated" fitHeight="65.0" fitWidth="65.0" layoutX="32.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/action-check.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="imageViewDice" fitHeight="65.0" fitWidth="65.0" layoutX="32.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/dice.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="imageViewNextTurn" fitHeight="70.0" fitWidth="70.0" layoutX="30.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/nextTurn.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="circleBtnNextTurn" fill="#da181800" layoutX="10.0" layoutY="10.0" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="54.0" translateY="52.0" />
+                                <Circle fx:id="circleBtnThrowDice" fill="#da181800" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="64.2" translateY="62.5" />
+                                <Circle fx:id="circleBtnConfirm" fill="#da181800" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="64.2" translateY="62.5" visible="false" />
+                                <MFXButton fx:id="btnThrowDice" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" disable="true" layoutX="4.099999904632568" layoutY="3.0999999046325684" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" />
+                                <MFXButton fx:id="btnNextTurn" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" disable="true" layoutX="4.099999904632568" layoutY="3.0999999046325684" onAction="#onClickNextTurn" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" visible="false" />
+                                <MFXButton fx:id="btnConfirm" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" layoutX="4.099999904632568" layoutY="3.0999999046325684" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" visible="false" />
+                            </children>
+                        </Pane>
+                        <Pane maxWidth="-Infinity" prefWidth="170.0">
+                            <children>
+                                <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="28.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/icon/card-games2.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="circleBtnExchange" fill="#da181800" layoutX="10.0" layoutY="25.0" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="50.0" translateY="35.0" />
+                                <MFXButton fx:id="btnSellCard" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" disable="true" onAction="#onClickCardSellingSpace" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" />
+                                <ImageView fx:id="notifImage" fitHeight="41.0" fitWidth="120.0" layoutX="79.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                    <image>
+                                        <Image url="@../pictures/icon/notif.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </Pane>
+                        <Pane maxWidth="-Infinity" prefWidth="170.0">
+                            <children>
+                                <ImageView fitHeight="53.0" fitWidth="58.0" layoutX="38.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/gear.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fx:id="circleBtnSettings" fill="#da181800" layoutX="86.0" layoutY="51.0" radius="67.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.5" translateX="-21.7" translateY="12.0" />
+                                <MFXButton fx:id="btnSettings" blendMode="DIFFERENCE" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL4" disable="true" layoutX="4.0999755859375" layoutY="3.0999999046325684" onAction="#onClickBtnSetting" opacity="0.5" prefHeight="120.0" prefWidth="120.0" rippleAnimateBackground="false" rippleBackgroundOpacity="0.0" rippleColor="WHITE" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-text-fill: transparent; -fx-background-color: linear-gradient(to bottom,  #090A0F,#1B2735);" />
+                            </children>
+                        </Pane>
+                    </children>
+                </HBox>
+                <BorderPane fx:id="layoutPlayer1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="LayoutPlayer" translateX="5.0">
+                    <left>
+                        <Pane fx:id="paneColorPlayer1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="105.0" scaleX="0.8" scaleY="0.8" styleClass="ImgPionPlayer" translateY="2.0" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <ImageView fx:id="imagePawnPlayer1" fitHeight="75.0" fitWidth="75.0" layoutX="19.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" translateX="-3.0" />
+                            </children>
+                        </Pane>
+                    </left>
+                    <center>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <MFXProgressBar fx:id="ProgressPlayer1" layoutX="15.0" layoutY="3.0" progress="1.0" style="-fx-accent: red;" styleClass="SpinBarProgress" translateY="80.0" />
+                                <HBox alignment="CENTER" layoutX="20.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="21.0" prefWidth="190.0">
+                                    <children>
+                                        <Label fx:id="textNamePlayer1" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="185.0" styleClass="Font-SizeNamePlayer" />
+                                    </children>
+                                </HBox>
+                                <Label layoutX="45.0" layoutY="50.0" styleClass="Font-SizeNamePlayer" text="Argent :" />
+                                <HBox layoutX="125.0" layoutY="50.0">
+                                    <children>
+                                        <Label fx:id="labelMoneyPlayer1" styleClass="Font-SizeNamePlayer">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pictures/imagesBoard/money.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </center>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </BorderPane>
+                <BorderPane fx:id="layoutPlayer4" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="LayoutPlayer" translateX="5.0" translateY="-5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                    <left>
+                        <Pane fx:id="paneColorPlayer4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="105.0" scaleX="0.8" scaleY="0.8" styleClass="ImgPionPlayer" translateY="2.0" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <ImageView fx:id="imagePawnPlayer4" fitHeight="75.0" fitWidth="75.0" layoutX="16.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" translateY="-5.0" />
+                            </children>
+                        </Pane>
+                    </left>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <center>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <MFXProgressBar fx:id="ProgressPlayer4" layoutX="15.0" layoutY="3.0" progress="1.0" translateY="80.0" />
+                                <HBox alignment="CENTER" layoutX="20.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="21.0" prefWidth="190.0">
+                                    <children>
+                                        <Label fx:id="textNamePlayer4" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="185.0" styleClass="Font-SizeNamePlayer" />
+                                    </children>
+                                </HBox>
+                                <Label layoutX="45.0" layoutY="50.0" styleClass="Font-SizeNamePlayer" text="Argent :" />
+                                <HBox layoutX="125.0" layoutY="50.0">
+                                    <children>
+                                        <Label fx:id="labelMoneyPlayer4" styleClass="Font-SizeNamePlayer">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pictures/imagesBoard/money.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="layoutPlayer2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="LayoutPlayer" translateX="-5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <Pane fx:id="paneColorPlayer2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="105.0" scaleX="0.8" scaleY="0.8" styleClass="ImgPionPlayer" translateX="235.0" translateY="2.0" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <ImageView fx:id="imagePawnPlayer2" fitHeight="75.0" fitWidth="75.0" layoutX="15.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" translateX="2.0" />
+                            </children>
+                        </Pane>
+                    </left>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <center>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="230.0" translateX="-105.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <MFXProgressBar fx:id="ProgressPlayer2" layoutX="15.0" layoutY="3.0" progress="1.0" translateY="80.0" />
+                                <HBox alignment="CENTER" layoutX="20.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="21.0" prefWidth="190.0">
+                                    <children>
+                                        <Label fx:id="textNamePlayer2" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="185.0" styleClass="Font-SizeNamePlayer" />
+                                    </children>
+                                </HBox>
+                                <Label layoutX="45.0" layoutY="50.0" styleClass="Font-SizeNamePlayer" text="Argent :" />
+                                <HBox layoutX="125.0" layoutY="50.0">
+                                    <children>
+                                        <Label fx:id="labelMoneyPlayer2" styleClass="Font-SizeNamePlayer">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pictures/imagesBoard/money.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="layoutPlayer3" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="LayoutPlayer" translateX="-5.0" translateY="-5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <left>
+                        <Pane fx:id="paneColorPlayer3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="105.0" scaleX="0.8" scaleY="0.8" styleClass="ImgPionPlayer" translateX="235.0" translateY="2.0" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets />
+                            </BorderPane.margin>
+                            <children>
+                                <ImageView fx:id="imagePawnPlayer3" fitHeight="75.0" fitWidth="75.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" translateX="-2.0" />
+                            </children>
+                        </Pane>
+                    </left>
+                    <center>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="230.0" translateX="-105.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <MFXProgressBar fx:id="ProgressPlayer3" layoutX="15.0" layoutY="3.0" progress="1.0" translateY="80.0" />
+                                <HBox alignment="CENTER" layoutX="20.0" layoutY="14.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="21.0" prefWidth="190.0">
+                                    <children>
+                                        <Label fx:id="textNamePlayer3" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="185.0" styleClass="Font-SizeNamePlayer" />
+                                    </children>
+                                </HBox>
+                                <Label layoutX="45.0" layoutY="50.0" styleClass="Font-SizeNamePlayer" text="Argent :" />
+                                <HBox layoutX="125.0" layoutY="51.0">
+                                    <children>
+                                        <Label fx:id="labelMoneyPlayer3" styleClass="Font-SizeNamePlayer">
+                                            <HBox.margin>
+                                                <Insets right="10.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pictures/imagesBoard/money.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                    </center>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+        <BorderPane fx:id="borderPaneWinner" visible="false" StackPane.alignment="CENTER">
+            <center>
+                <AnchorPane fx:id="parentWinner" opacity="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgb(0,0,0,0.7);">
+                    <children>
+                        <ImageView fx:id="confetieWinner" fitHeight="878.0" fitWidth="1506.0" layoutX="53.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pictures/imagesBoard/confetie.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="logoWinner" fitHeight="275.0" fitWidth="745.0" layoutX="493.0" layoutY="58.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pictures/imagesBoard/logoWinner.png" />
+                            </image>
+                        </ImageView>
+                        <SubScene fx:id="subSceneWinner" depthBuffer="true" fill="TRANSPARENT" height="444.0" layoutX="477.0" layoutY="318.0" width="580.0" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="477.0" AnchorPane.rightAnchor="477.0" AnchorPane.topAnchor="318.0">
+                            <antiAliasing>
+                                <SceneAntialiasing fx:constant="BALANCED" />
+                            </antiAliasing>
+                            <root>
+                                <Pane fx:id="contentsWinner3D" style="-fx-background-color: transparent;" />
+                            </root>
+                        </SubScene>
+                        <Pane fx:id="paneWinnerSlideUpOne" layoutX="1071.0" layoutY="161.0" style="-fx-background-color: blue; -fx-background-radius: 8;" translateY="1000.0">
+                            <children>
+                                <Label fx:id="winnerName" alignment="CENTER" prefHeight="70.0" prefWidth="430.0" style="-fx-text-fill: #EAC612;" styleClass="font-sizeWinner" text="steven">
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="paneWinnerSlideUpTwo" layoutX="1071.0" layoutY="283.0" prefWidth="430.0" style="-fx-background-color: blue; -fx-background-radius: 8;" translateY="1000.0">
+                            <children>
+                                <ImageView fitHeight="76.0" fitWidth="70.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pictures/imagesBoard/money.png" />
+                                    </image>
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                </ImageView>
+                                <Label fx:id="winnerMoney" alignment="CENTER" layoutX="123.0" layoutY="9.0" prefHeight="53.0" prefWidth="225.0" style="-fx-text-fill: #EAC612;" styleClass="font-sizeLabelWinner" text="1250$" translateY="-2.0">
+                                    <effect>
+                                        <DropShadow radius="7.25" width="10.0" />
+                                    </effect></Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+
+    </children>
+</StackPane>
