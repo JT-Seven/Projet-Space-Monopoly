@@ -13,4 +13,4 @@ Durée : 2 mois à INTECH Paris.
 
 site d'INTECH : https://www.intechinfo.fr/
 
-https://lnkd.in/dEpC6Tz5
+lien vers la démonstration du jeu : https://lnkd.in/dEpC6Tz5
